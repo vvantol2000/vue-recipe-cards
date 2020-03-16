@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Recipe Cards List</h1>
+    <h1>Recipe Cards</h1>
     <div class="container">
       <div class="row">
         <div class="col-md-4">
