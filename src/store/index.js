@@ -4,8 +4,15 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {},
-  mutations: {},
+  state: {
+    recipes: [],
+    recipe: {},
+  },
+  mutations: {
+    ADD_RECIPE(state) {
+      console.log(state)
+    }
+  },
   actions: {},
   modules: {}
 });
