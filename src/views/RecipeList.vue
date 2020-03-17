@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="recipe-list">
     <h1>Recipe Cards</h1>
     <div class="container">
       <div class="row">
@@ -14,7 +14,7 @@
   </div>
 </template>
 <script>
-  import axios from 'axios';
+  import RecipeService from "../services/RecipeService";
   import RecipeCard from "../components/RecipeCard";
 
   export default {
@@ -29,7 +29,7 @@
   props: ["id"],
   async created() {
     try {
-      const recipes = await axios.get(' http://localhost:3000/recipe');
+      const recipes = await RecipeService.getRecipes();
       const {data} = recipes;
       this.recipes = data
     } catch (e) {
@@ -38,4 +38,8 @@
   }
 };
 </script>
-<style scoped></style>
+<style scoped>
+  #recipe-list {
+    margin-top: 40px;
+  }
+</style>
