@@ -16,7 +16,7 @@
 <script>
   import RecipeService from "../services/RecipeService";
   import RecipeCard from "../components/RecipeCard";
-
+  import { mapGetters } from 'vuex'
   export default {
   data() {
     return {
@@ -27,6 +27,11 @@
     RecipeCard
   },
   props: ["id"],
+    computed: {
+      ...mapGetters([
+
+      ])
+    },
   async created() {
     try {
       const recipes = await RecipeService.getRecipes();

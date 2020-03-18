@@ -1,16 +1,16 @@
 {
   "recipe": [
-  {
-    "id": 34,
-    "title": "Puff Pastry Waffles",
-    "author": "foodcritic",
-    "description": "\"Add puff pastry to the list of good things you can snackify in your waffle iron. Although they don't puff up as much as oven-baked puff pastry, they turn out crispy on the outside and tender on the inside, and they take only minutes to make. Serve hot or at room temperature with syrup, fruit, Nutella®, fruit preserves, or nut butter.\"",
-    "time": "8 min",
-    "serving": "8 servings",
-    "directions": "\n    Line a cutting board with parchment paper. Unfold puff pastry onto cutting board. Cut each sheet into 4 equal squares.\n    Preheat a waffle iron according to manufacturer's instructions. Grease with cooking spray.\n    Place one puff pastry square in the preheated waffle iron; cook until golden brown, 3 to 5 minutes. Repeat with remaining puff pastry squares.\n",
-    "ingredients": "k;n.knl",
-    "image": "https://images.media-allrecipes.com/userphotos/560x315/3374022.jpg"
-  },
+    {
+      "id": 34,
+      "title": "Puff Pastry Waffles",
+      "author": "foodcritic",
+      "description": "Add puff pastry to the list of good things you can snackify in your waffle iron. Although they don't puff up as much as oven-baked puff pastry, they turn out crispy on the outside and tender on the inside, and they take only minutes to make. Serve hot or at room temperature with syrup, fruit, Nutella®, fruit preserves, or nut butter.",
+      "time": "8 min",
+      "serving": "8 servings",
+      "directions": "Line a cutting board with parchment paper. Unfold puff pastry onto cutting board. Cut each sheet into 4 equal squares.\n    Preheat a waffle iron according to manufacturer's instructions. Grease with cooking spray.\n    Place one puff pastry square in the preheated waffle iron; cook until golden brown, 3 to 5 minutes. Repeat with remaining puff pastry squares.",
+      "ingredients": "k;n.knl",
+      "image": "https://images.media-allrecipes.com/userphotos/560x315/3374022.jpg"
+    },
     {
       "id": 35,
       "title": "French Toast",
@@ -21,7 +21,6 @@
       "directions": "\n    Line a cutting board with parchment paper. Unfold puff pastry onto cutting board. Cut each sheet into 4 equal squares.\n    Preheat a waffle iron according to manufacturer's instructions. Grease with cooking spray.\n    Place one puff pastry square in the preheated waffle iron; cook until golden brown, 3 to 5 minutes. Repeat with remaining puff pastry squares.\n",
       "ingredients": "llkhli",
       "image": "https://images.unsplash.com/photo-1574025343720-8eaa3bb9be37?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1778&q=80"
-
     },
     {
       "id": 354,
@@ -55,6 +54,26 @@
       "directions": "In a bowl, mix all the dry ingredients - cocoa, flour, baking powder and vanilla sugar.\n2. Beat butter with sugar. Add egg, beaten\n3. In the oil mixture, add alternately milk and a dry mixture. Knead is not a thick dough.\n4. Using a pastry bag or a tablespoon, put the dough on a baking sheet lined with parchment for baking. Align, giving the shape of a circle.\n5. Bake for 10-12 minutes at 175 degrees.\n6. Cool. To whip cream with sugar powder. For one half cookies put the cream, spoon or with a confectionery syringe, cover with a second half.\n7. Let the chocolate cookies be ready before serving for half an hour in the refrigerator.\n",
       "ingredients": "100 g of soft butter\n110 g of sugar\n1 egg\n65 g of cocoa powder\n150 g of flour\n1 teaspoon of vanilla sugar\n1 teaspoon baking powder\n100 ml of milk\n2.5 tablespoons of powdered sugar\n200 ml of fatty cream 33-35%",
       "image": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80"
+    },
+    {
+      "id": 5686,
+      "title": "Make Cookies",
+      "author": "John",
+      "description": "Jipajojdojfsifahipqehfsf",
+      "time": "8",
+      "directions": "aknksaffjsjfpaojos",
+      "ingredients": "ksndpsiafpopwp9029292u9u2u[jjjp",
+      "image": ""
+    },
+    {
+      "id": 53020,
+      "title": "Eggs Benidict",
+      "author": "Vantol Bennett",
+      "description": "iajpoqwfpojwqfoqhf",
+      "time": "8",
+      "directions": "pajpshhfpiwhwpihphwpqhf",
+      "ingredients": "acppshhaphsdahfphaphfphafhpahfhaphfphahfphphshfph",
+      "image": ""
     }
-]
+  ]
 }

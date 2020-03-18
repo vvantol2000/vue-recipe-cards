@@ -5,15 +5,67 @@
         </div>
         <div class="col-md-4">
             <h1 class="title"> Create Recipe </h1>
-            <label>Add Title</label>
-            <div class="form-group">
-                <input type="text"
-                       value=""
-                       placeholder=""
-                       class="form-control"
-                       style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;"
-                       autocomplete="off">
-            </div>
+            <form @submit.prevent="createRecipe">
+                <h2>Recipe Title</h2>
+
+                <div>
+                    <label>Title</label>
+                    <input type="text"
+                           value=""
+                           v-model="recipe.title"
+                           placeholder="Add the recipe title here...."
+                           autocomplete="off">
+                </div>
+                <h2>Who is the Author?</h2>
+
+                <div>
+                    <label>Author</label>
+                    <input type="text"
+                           value=""
+                           v-model="recipe.author"
+                           placeholder="Add the author here...."
+                           autocomplete="off">
+                </div>
+
+                <div>
+                    <label>Description</label>
+                    <input type="text"
+                           value=""
+                           v-model="recipe.description"
+                           placeholder="Add the recipe title here...."
+                           autocomplete="off">
+                </div>
+                <div>
+                    <label>Time</label>
+                    <input type="text"
+                           value=""
+                           v-model="recipe.time"
+                           placeholder="Add the recipe title here...."
+                           autocomplete="off">
+                </div>
+                <div>
+                    <label>Directions</label>
+                    <input type="text"
+                           value=""
+                           v-model="recipe.directions"
+                           placeholder="Add the directions...."
+                           autocomplete="off">
+                </div>
+                <div>
+                    <label>Ingredients</label>
+                    <input type="text"
+                           value=""
+                           v-model="recipe.ingredients"
+                           placeholder="Add the ingredients....">
+                </div>
+                <div>
+                    <label>Image</label>
+                    <input type="file"
+                           @change="recipe.image">
+                </div>
+                <input type="submit" class="button" value="Submit">
+            </form>
+
         </div>
 
     </div>
@@ -22,9 +74,37 @@
     export default {
         data() {
             return {
-                title: ''
+                recipe: this.createCleanRecipe()
             }
         },
+        methods: {
+            createRecipe() {
+              this.$store.dispatch('createRecipe', this.recipe).then(() =>{
+                  this.$router.push({
+                     name: 'recipe-show',
+                     params: { id: this.recipe.id }
+                  });
+                  this.recipe = this.createCleanRecipe();
+              })
+            },
+          createCleanRecipe() {
+              const id = Math.floor(Math.random() * 100000);
+
+              return {
+                  id: id,
+                  title: '',
+                  author: '',
+                  description: '',
+                  time: '',
+                  directions: '',
+                  ingredients: '',
+                  image: '',
+              }
+          }
+        },
+        computed: {
+
+        }
     }
 </script>
 <style scoped>
