@@ -3,43 +3,38 @@
     <h1>Recipe Cards</h1>
     <div class="container">
       <div class="row">
-        <div class="col-md-4" v-for="recipe in recipes" :key="recipe.id" >
-            <RecipeCard :recipe="recipe" />
+        <div class="col-md-4" v-for="recipe in recipes" :key="recipe.id">
+          <RecipeCard :recipe="recipe" />
         </div>
-          
       </div>
-
-
     </div>
   </div>
 </template>
 <script>
-  // import RecipeService from "../services/RecipeService";
-  import RecipeCard from "../components/RecipeCard";
-  import { mapGetters } from 'vuex'
-  export default {
-  data() {
-    return {
-      recipes: []
-    }
-  },
+// import RecipeService from "../services/RecipeService";
+import RecipeCard from "../components/RecipeCard";
+import { mapGetters, mapState } from "vuex";
+
+
+
+export default {
   components: {
     RecipeCard
   },
   props: ["id"],
-    computed: {
-      ...mapGetters([
-
-      ])
-    },
-    methods: {
-     // fetchRecipes() {
-     //   this.$store.dispatch('fetchRecipe', this.recipes)
-     // }
-    },
+  computed: {
+    ...mapState(["recipes"]),
+    ...mapGetters([])
+  },
+  methods: {
+    // fetchRecipes() {
+    //   this.$store.dispatch('fetchRecipe', this.recipes)
+    // }
+  },
+  beforeCreate() {},
   created() {
-    this.$store.dispatch('fetchRecipe');
-    this.recipes = this.$store.state.recipes
+    this.$store.dispatch("fetchRecipes");
+
     //this.recipes = this.fetchRecipes()
 
     // try {
@@ -53,7 +48,7 @@
 };
 </script>
 <style scoped>
-  #recipe-list {
-    margin-top: 40px;
-  }
+#recipe-list {
+  margin-top: 40px;
+}
 </style>
