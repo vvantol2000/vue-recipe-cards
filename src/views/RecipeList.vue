@@ -14,7 +14,7 @@
   </div>
 </template>
 <script>
-  import RecipeService from "../services/RecipeService";
+  // import RecipeService from "../services/RecipeService";
   import RecipeCard from "../components/RecipeCard";
   import { mapGetters } from 'vuex'
   export default {
@@ -32,14 +32,23 @@
 
       ])
     },
-  async created() {
-    try {
-      const recipes = await RecipeService.getRecipes();
-      const {data} = recipes;
-      this.recipes = data
-    } catch (e) {
-      console.error(e)
-    }
+    methods: {
+     // fetchRecipes() {
+     //   this.$store.dispatch('fetchRecipe', this.recipes)
+     // }
+    },
+  created() {
+    this.$store.dispatch('fetchRecipe');
+    this.recipes = this.$store.state.recipes
+    //this.recipes = this.fetchRecipes()
+
+    // try {
+    //   const recipes = await RecipeService.getRecipes();
+    //   const {data} = recipes;
+    //   this.recipes = data
+    // } catch (e) {
+    //   console.error(e)
+    // }
   }
 };
 </script>

@@ -17,6 +17,9 @@ export default new Vuex.Store({
   mutations: {
     ADD_RECIPE(state, recipe) {
       state.recipes.push(recipe)
+    },
+    FETCH_RECIPE(state, recipes) {
+      return state.recipes = recipes
     }
   },
   getters: {
@@ -30,6 +33,10 @@ export default new Vuex.Store({
       await RecipeService.postRecipe(recipe).then(() =>{
         commit('ADD_RECIPE', recipe)
       })
+    },
+    async fetchRecipe({commit}) {
+      const recipes = await RecipeService.getRecipes();
+      commit('FETCH_RECIPE', recipes.data)
     }
 
   },
